@@ -1,0 +1,13 @@
+body{
+    color: yellowgreen;
+    background-image: url(../foto1/backgroundd.jpeg);
+    font-size: 20px;
+    font-style: initial;
+    font-family: 'Times New Roman', Times, serif;
+}
+fieldset, legend{
+    color: rgb(235, 237, 100);
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    border: yellow groove 5px;
+    border-radius: 30px;
