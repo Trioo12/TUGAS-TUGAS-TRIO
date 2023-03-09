@@ -1,0 +1,68 @@
+/*selector tag*/
+p{
+    color: rgb(187, 255, 0);
+    text-align: justify;
+    font-size: 15pt;
+}
+fieldset, legend{
+    color: rgb(235, 237, 100);
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    border: yellow groove 5px;
+    border-radius: 30px;
+}
+body{
+    /*background-color: darkgreen;*/ 
+    background-image: url(../foto1/backgroundd.jpeg);
+    background-repeat: no-repeat; 
+   
+}
+legend{
+   padding:  10px;
+   font-weight: bold;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 12pt;
+   
+
+}
+div#menu{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    
+}
+table{
+    border: 10px;
+    margin: auto;
+
+}
+a,item:link, a,item:visited, a,item:active{
+    text-decoration: none;
+    font-size: 15pt;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(205, 219, 9);
+    border: 2px solid orange;
+    padding: 10px;
+    background-color: rgb(177, 28, 28);
+    border-radius: 15px;
+    position: relative;
+    bottom: 6px;
+    
+
+}
+a,item:hover{
+color: yellowgreen;
+text-decoration: none;
+font-size: 15pt;
+padding: 12px;
+
+}
+li.menu{
+    color: blue;
+}
+h2{
+    text-shadow: 100px yellow;
+    color: black;
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Trio Tugas js</title>
+    
+</head>
+<body>
+    <script>
+     // berfungsi untuk menerima input panjang sisi-sisi segitiga
+     var sisi1 = parseFloat(prompt("Masukkan panjang sisi 1:"));
+     var sisi2 = parseFloat(prompt("Masukkan panjang sisi 2:"));
+     var sisi3 = parseFloat(prompt("Masukkan panjang sisi 3:"));
+
+     // berfungsi untuk menghitung keliling segitiga
+     var keliling = sisi1 + sisi2 + sisi3;
+
+     // berfungsi untuk menghitung setengah dari keliling segitiga
+     var setengahKeliling = keliling / 2;
+
+     // berfungsi untuk menghitung luas segitiga menggunakan rumus Heron
+     var luas = Math.sqrt(setengahKeliling * (setengahKeliling - sisi1) * (setengahKeliling - sisi2) * (setengahKeliling - sisi3));
+
+     // berfungsi buat Menampilkan hasil
+     console.log("Keliling segitiga) : " + keliling);
+     console.log("luas segitiga) : " + luas);
+
+
+     document.write("<h1 align='center' >  Trio Prawiro Negoro </h1>")
+     document.write("<h3 align='center'> Bangun Ruang Datar Segitiga </h3>")
+     document.write("<hr/>");
+     document.write("<br> Luas segitiga: "  + luas + "<br> Keliling persegi panjang: " + keliling )
+
+    </script>
+</body>
+</html>
