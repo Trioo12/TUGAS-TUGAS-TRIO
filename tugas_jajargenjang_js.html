@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Trio Tugas js</title>
+    
+</head>
+<body>
+    <script>
+     // berfungsi menerima input panjang alas dan tinggi jajargenjang
+     var alas = parseFloat(prompt("Masukkan panjang alas jajargenjangnya:"));
+     var tinggi = parseFloat(prompt("Masukkan tinggi jajargenjangnya:"));
+
+     // berfungsi menerima input panjang sisi-sisi jajargenjang
+     var sisi1 = parseFloat(prompt("Masukkan panjang sisi 1 jajargenjangnya:"));
+     var sisi2 = parseFloat(prompt("Masukkan panjang sisi 2 jajargenjangnya:"));
+
+     // berfungsi menghitung keliling jajargenjang
+     var keliling = 2 * (sisi1 + sisi2);
+
+     // berfungsi menghitung luas jajargenjang
+     var luas = alas * tinggi;
+
+     // berfungsi buat Menampilkan hasil
+     console.log("Keliling jajargenjang) : " + keliling);
+     console.log("luas jajargenjang) : " + luas);
+
+
+     document.write("<h1 align='center' >  Trio Prawiro Negoro </h1>")
+     document.write("<h3 align='center'> Bangun Ruang Datar jajargenjang </h3>")
+     document.write("<hr/>");
+     document.write("<br> Luas segitiga: "  + luas + "<br> Keliling persegi panjang: " + keliling )
+
+    </script>
+</body>
+</html>
