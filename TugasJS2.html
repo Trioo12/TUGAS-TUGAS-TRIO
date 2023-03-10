@@ -1,0 +1,42 @@
+<script>
+    let pegawai = "Trio Prawiro Negoro";
+    let jabatan = "Manager";
+    let gajiPokok = 0;
+    let statuss = "menikah";
+
+    // deklarasi variabel, tunjangan jabatan, bpjs, dan tunjangan keluarga
+    let tunjanganJabatan = 0;
+    let bpjs = 0;
+    let tunjanganKeluarga = 0;
+
+    switch(jabatan){
+        case "Manager": gajiPokok = 10000000; break;
+        case "Asisten Manager": gajiPokok = 8000000; break;
+        case "staff": gajiPokok = 5000000; break;
+        default: gajiPokok = 0;
+
+
+    }
+
+    // menghitung tunjangan jabatan dan bpjs
+    tunjanganJabatan = 0.1 * gajiPokok;
+    bpjs = 0.1 * gajiPokok;
+
+    // menghitung tunjangan keluarga 
+    if (statuss === "menikah") 
+    tunjanganKeluarga = 0.1 * gajiPokok;
+
+
+    // menghitung total pendapatan atau penghasilan
+    let totalPenghasilan = gajiPokok + tunjanganJabatan + tunjanganKeluarga;
+    document.write("Data Pegawai" + 
+        "<br> Nama : " + pegawai +
+        "<br> Anda Mempunyai Jabatan Sebagai  : " + jabatan +
+        "<br> Gaji Pokok : Rp." + gajiPokok +
+        "<br> Tunjangan Jabatan : Rp." + tunjanganJabatan +
+        "<br> BPJS : Rp." + bpjs +
+        "<br> Tunjangan Keluarga : Rp." + tunjanganKeluarga +
+        "<br> Total Penghasilan : Rp." + totalPenghasilan
+         )
+
+</script>
