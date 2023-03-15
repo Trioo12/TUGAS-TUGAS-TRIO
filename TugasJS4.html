@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #c70808;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #kalkulator {
+            background-color: #cedb0e;
+            margin: 0 auto;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        #kalkulator input[type="text"] {
+            border: 1px solid #CCC;
+            padding: 10px;
+            width: 100%;
+        }
+
+        #kalkulator button {
+            background-color: #4CAF50;
+            border: none;
+            color: #FFF;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        #kalkulator button:hover {
+            background-color: #3E8E41;
+        }
+
+        #hasil-label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #08947d;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Kalkulator</h1>
+    <h3 style="text-align: center; color: rgb(201, 255, 5);">Trio Prawiro Negoro</h3>
+    <form id="kalkulator">
+<tr>
+    Angka 1 :
+    <input type="text" name="angka" placeholder="masukan angka pertama"><br>
+</tr>
+<tr>
+    Angka 2 :
+    <input type="text" name="angka2" placeholder="masukan angka kedua"><br>
+</tr>
+<tr>
+    <td style="color: chartreuse;">Operasi :<br>
+        penambahan<br>
+        perkalian<br>
+        pengurangan<br>
+        pembagian<br>
+        perpangkatan<br>
+    </td>
+</tr>
+<tr>
+    <td>Hasil :</td>
+    <td><input type="text" name="hasil" value="" disabled></td>
+</tr>
+
+    <button type="button" name="btn_tambah" onclick="tambah()">+</button>
+    <button type="button" name="btn_kurang" onclick="kurang()">-</button>
+    <button type="button" name="btn_kali" onclick="kali()">*</button>
+    <button type="button" name="btn_bagi" onclick="bagi()">/</button>
+    <button type="button" name="btn_pangkat" onclick="pangkat()">^</button>
+</form>
+
+    <script src="js/kalkulator.js">
+        
+
+    </script>
+</body>
+</html>
