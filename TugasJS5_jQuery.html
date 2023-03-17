@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hide Image on Click using jQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery-3.6.4.js"></script>
+    
+	<script>
+		$(document).ready(function(){
+			$("img").click(function(){
+				$(this).hide();
+                alert("profil Gambar Politeknik Negeri Malang");
+			});
+           
+		});
+	</script>
+   
+</head>
+<body style="background-color: brown;">
+    <script>
+        $( document ).ready(function() {
+            
+            $("#panggil_id").css("color", "blue"); 
+            $(".panggil_class").css("color", "orange"); 
+
+        });
+    </script>
+    <h3 style="text-align: center;" id="panggil_id">Tugas Javascript jQuery</h3>
+    <h4 style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-style: inherit;" class="panggil_class">Trio Prawiro Negoro/POLITEKNIK NEGERI MALANG</h4>
+	<img style="width: 100%;" src="foto1/polinema.png" alt="polinema">
+    <img style="width: 100%;" src="foto1/gedungpolinema.jpg" alt="gedungpolinema">
+    <img style="width: 100%;" src="foto1/tampilandepanpolinema.jpg" alt="tampilandepanpolinema">
+</body>
+</html>
