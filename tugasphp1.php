@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bangun Ruang - Jajar Genjang</title>
+	<title>Bangun Datar - Jajar Genjang</title>
 </head>
 <body>
 
 	<h2>Jajar Genjang</h2>
-	<form method="post" action="">
-		<label>Alas:</label>
+<form method="post" action="">
+	<tr>
+		<td>Alas:</td>
+		<td>
 		<input type="number" name="alas" required><br><br>
-		<label>Tinggi:</label>
+		</td>
+	</tr>
+	<tr>
+		<td>Tinggi:</td>
+		<td>
 		<input type="number" name="tinggi" required><br><br>
-		<label>Tinggi Sisi Miring:</label>
+		</td>
+	</tr>
+	<tr>
+		<td>Tinggi Sisi Miring:</td>
+		<td>
 		<input type="number" name="tinggi_sisi_miring" required><br><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
 		<input type="submit" name="hitung" value="Hitung">
+		</td>
+	</tr>
 	</form>
 
 	<?php
