@@ -1,0 +1,80 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 18px;
+  }
+  body{
+    background-color: #788079;
+  }
+  
+  label {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  input, select {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #1b371c;
+    color: rgb(23, 115, 206);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #100e0e;
+  }
+  
+  .result {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .result p {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .result table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .result th, .result td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .result th {
+    background-color: rgb(77, 80, 85)2;
+    font-weight: bold;
+  }
+  table{
+    background-color: rgb(77, 80, 85);
+  }
+  p{
+    color: rgb(196, 205, 34);
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-style: italic;
+    
+
+  }
+  
