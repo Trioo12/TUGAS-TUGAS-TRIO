@@ -8,7 +8,7 @@ function hitung_skor($skills){
     $skor = 0;
     foreach($skills as $skill){
         if(isset($ar_skill[$skill])){
-            $skor += $ar_skill[$skill];
+            $skor += [$skill];
         }
     }
     return $skor;
