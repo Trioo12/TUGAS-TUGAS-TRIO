@@ -9,7 +9,7 @@ MariaDB [dbtoko1]> SELECT * FROM produk WHERE (harga_beli * stok_produk) > 20000
 1 row in set (0.004 sec)
 
 
--- 2.	Tampilkan data produk beserta selisih stok dengan minimal stok
+-- 2.	Tampilkan dataa produk beserta selisih stok dengan minimal stok
 MariaDB [dbtoko1]> select SUM(stok_produk - min_stock) as selisih from produk;
 +---------+
 | selisih |
