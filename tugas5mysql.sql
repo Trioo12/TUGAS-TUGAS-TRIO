@@ -76,3 +76,15 @@ MariaDB [bisnis]> SELECT * FROM pesanan WHERE id_pesanan = 2;
 +------------+----------------+-------------+-------------------+
 1 row in set (0.000 sec)
 
+MariaDB [bisnis]> select * from pesanan;
++------------+----------------+-------------+-------------------+
+| id_pesanan | nama_pelanggan | total_harga | status_pembayaran |
++------------+----------------+-------------+-------------------+
+|          1 | John Doe       |    50000.00 | NULL              |
+|          2 | Jane Smith     |    75000.00 | lunas             |
+|          3 | Bob Johnson    |   100000.00 | belum lunas       |
+|          4 | Alice Lee      |   125000.00 | belum lunas       |
++------------+----------------+-------------+-------------------+
+4 rows in set (0.001 sec)
+
+
