@@ -24,8 +24,10 @@ $pesanan = $model->Pesanan();
 </div>
 <div class="card mb-4">
     <div class="card-header">
-        <i class="fas fa-table me-1"></i>
-        DataTable Example
+        <!-- <i class="fas fa-table me-1"></i>
+        DataTable Example -->
+        <!-- membuat tombol mengarahkan ke tambah -->
+        <a href="index.php?url=pesanan_form" class="btn btn-primary btn-sm"> Tambah</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
@@ -36,6 +38,7 @@ $pesanan = $model->Pesanan();
                     <th> Total </th>
                     <th> Pelanggan_id </th>
                     <th> ID_pelanggan </th>
+                    <th> Action </th>
 
                 </tr>
             </thead>
@@ -46,6 +49,7 @@ $pesanan = $model->Pesanan();
                     <th> Total </th>
                     <th> Pelanggan_id </th>
                     <th> ID_pelanggan </th>
+                    <th> Action </th>
                 </tr>
             </tfoot>
             <tbody>
@@ -72,6 +76,15 @@ $pesanan = $model->Pesanan();
                             <?= $row['id_pelanggan'] ?>
                         </td>
                         <td>
+                        <td>
+                            <form action="pesanan_controller.php" method="POST">
+                                <a class="btn btn-info btn-sm"
+                                    href="index.php?url=pesanan_detail&id=<?= $row['id'] ?>">Detail</a>
+                                <a class="btn btn-warning btn-sm" href="">Ubah</a>
+                                <a class="btn btn-danger btn-sm" href="">Hapus</a>
+                                <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                            </form>
+                        </td>
 
 
                     </tr>

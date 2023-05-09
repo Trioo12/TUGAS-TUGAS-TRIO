@@ -24,8 +24,10 @@ $data_produk = $model->dataProduk();
 </div>
 <div class="card mb-4">
     <div class="card-header">
-        <i class="fas fa-table me-1"></i>
-        DataTable Example
+        <!-- <i class="fas fa-table me-1"></i>
+        DataTable Example -->
+        <!-- membuat tombol mengarahkan ke tambah -->
+        <a href="index.php?url=product_form" class="btn btn-primary btn-sm"> Tambah</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
@@ -39,6 +41,7 @@ $data_produk = $model->dataProduk();
                     <th> Stok_Produk </th>
                     <th> Min_stock </th>
                     <th> Jenis_Produk </th>
+                    <th> Action </th>
                 </tr>
             </thead>
             <tfoot>
@@ -51,6 +54,7 @@ $data_produk = $model->dataProduk();
                     <th>Stok_Produk</th>
                     <th>Min_stock</th>
                     <th>Jenis_Produk</th>
+                    <th> Action </th>
                 </tr>
             </tfoot>
             <tbody>
@@ -65,7 +69,7 @@ $data_produk = $model->dataProduk();
                     <tr>
                         <td>
                             <?= $no ?>
-                        <td>
+                        </td>
                         <td>
                             <?= $row['kode_produk'] ?>
                         </td>
@@ -86,6 +90,15 @@ $data_produk = $model->dataProduk();
                         </td>
                         <td>
                             <?= $row['jenis_produk'] ?>
+                        </td>
+                        <td>
+                            <form action="product_controller.php" method="POST">
+                                <a class="btn btn-info btn-sm"
+                                    href="index.php?url=product_detail&id=<?= $row['id'] ?>">Detail</a>
+                                <a class="btn btn-warning btn-sm" href="">Ubah</a>
+                                <a class="btn btn-danger btn-sm" href="">Hapus</a>
+                                <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                            </form>
                         </td>
 
                     </tr>

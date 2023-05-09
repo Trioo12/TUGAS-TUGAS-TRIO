@@ -17,6 +17,23 @@ class Produk
         return $rs;
 
     }
+    public function getProduk($id)
+    {
+        $sql = "SELECT produk.*, jenis_produk.nama as kategori FROM produk INNER JOIN 
+        jenis_produk ON jenis_produk = produk.jenis_produk WHERE produk.id = ?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute([$id]);
+        $rs = $ps->fetch();
+        return $rs;
+    }
+
+    public function simpan($data)
+    {
+        $sql = "INSERT INTO produk(kode_produk, nama_produk, harga_beli, harga_produk, stok_produk, min_stock, jenis_produk)
+        values (?,?,?,?,?,?,?)";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute($data);
+    }
 }
 
 
