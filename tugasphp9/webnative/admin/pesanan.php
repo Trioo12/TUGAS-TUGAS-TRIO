@@ -80,9 +80,11 @@ $pesanan = $model->Pesanan();
                             <form action="pesanan_controller.php" method="POST">
                                 <a class="btn btn-info btn-sm"
                                     href="index.php?url=pesanan_detail&id=<?= $row['id'] ?>">Detail</a>
-                                <a class="btn btn-warning btn-sm" href="">Ubah</a>
-                                <a class="btn btn-danger btn-sm" href="">Hapus</a>
-                                <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                                <a class="btn btn-warning btn-sm"
+                                    href="index.php?url=pesanan_form&idedit<?= $row['id'] ?>">Ubah</a>
+                                <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus"
+                                    onclick="return confirm('anda yakin akan dihapus?')">Hapus</a>
+                                    <input type="hidden" name="idx" value="<?= $row['id'] ?>">
                             </form>
                         </td>
 

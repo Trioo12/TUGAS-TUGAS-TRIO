@@ -34,5 +34,19 @@ class JenisPesanan
         $ps->execute($data);
 
     }
+    public function ubah($data)
+    {
+        $sql = "INSERT INTO pesanan(tanggal=?, total=?, pelanggan_id=?, id_pelanggan=?)
+        WHERE id=?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute($data);
+    }
+    public function hapus($id)
+    {
+        $sql = "DELETE FROM pesanan WHERE id=?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute([$id]);
+
+    }
 }
 ?>

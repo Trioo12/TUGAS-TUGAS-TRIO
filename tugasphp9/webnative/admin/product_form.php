@@ -3,39 +3,39 @@
 $obj_produk = new Produk();
 $data_produk = $obj_produk->dataProduk();
 ?>
-<form action="produk_controller.php" method="POST">
+<form action="product_controller.php" method="post">
     <div class="form-group row">
-        <label for="text1" class="col-4 col-form-label">Kode Produk</label>
+        <label for="text1" class="col-4 col-form-label">Kode</label>
         <div class="col-8">
             <input id="kode_produk" name="kode_produk" type="text" class="form-control">
         </div>
     </div>
     <div class="form-group row">
-        <label for="text2" class="col-4 col-form-label">Nama Produk</label>
+        <label for="text2" class="col-4 col-form-label">Nama</label>
         <div class="col-8">
             <input id="nama_produk" name="nama_produk" type="text" class="form-control">
         </div>
     </div>
     <div class="form-group row">
-        <label for="text3" class="col-4 col-form-label">Harga Beli</label>
+        <label for="text3" class="col-4 col-form-label">Harga Jual</label>
         <div class="col-8">
             <input id="harga_beli" name="harga_beli" type="text" class="form-control">
         </div>
     </div>
     <div class="form-group row">
-        <label for="text" class="col-4 col-form-label">Harga Produk</label>
+        <label for="text" class="col-4 col-form-label">Harga Beli</label>
         <div class="col-8">
             <input id="harga_produk" name="harga_produk" type="text" class="form-control">
         </div>
     </div>
     <div class="form-group row">
-        <label for="text4" class="col-4 col-form-label">Stok Produk</label>
+        <label for="text4" class="col-4 col-form-label">Stok</label>
         <div class="col-8">
             <input id="stok_produk" name="stok_produk" type="text" class="form-control">
         </div>
     </div>
     <div class="form-group row">
-        <label for="text5" class="col-4 col-form-label">Min Stok</label>
+        <label for="text5" class="col-4 col-form-label">Minimal Stok</label>
         <div class="col-8">
             <input id="min_stock" name="min_stock" type="text" class="form-control">
         </div>

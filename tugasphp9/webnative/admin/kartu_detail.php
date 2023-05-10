@@ -1,7 +1,7 @@
-<!-- <?php
+<?php
 $id = $_REQUEST['id'];
 $model = new Kartu();
-$data_kartu = $model->datakartuu($id);
+$data_kartu = $model->getKartu($id);
 ?>
 <br>
 <div>
@@ -9,4 +9,4 @@ $data_kartu = $model->datakartuu($id);
         <?= $data_kartu['nama'] ?>
     </h5>
 
-</div> -->
+</div>

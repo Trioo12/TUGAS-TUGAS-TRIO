@@ -34,6 +34,20 @@ class Produk
         $ps = $this->koneksi->prepare($sql);
         $ps->execute($data);
     }
+    public function ubah($data)
+    {
+        $sql = "INSERT INTO produk(kode_produk=?, nama_produk=?, harga_beli=?, harga_produk=?, stok_produk=?, min_stock=?, jenis_produk=?)
+        WHERE id=?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute($data);
+    }
+    public function hapus($id)
+    {
+        $sql = "DELETE FROM produk WHERE id=?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute([$id]);
+
+    }
 }
 
 

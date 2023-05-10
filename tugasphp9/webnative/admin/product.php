@@ -1,18 +1,16 @@
 <?php
-// include_once 'top.php';
-// include_once 'menu.php';
 $model = new Produk();
 $data_produk = $model->dataProduk();
 
-// foreach ($data_produk as $row) {
-//     print $row['kode_produk'];
-// }
+//foreach($data_produk as $row){
+//    print $row['kode'];
+//}
 ?>
-
-<h1 class="mt-4">Tables</h1>
+<h1 class="mt-4">Data Produk</h1>
 <ol class="breadcrumb mb-4">
     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-    <li class="breadcrumb-item active">Tables</li>
+    <li class="breadcrumb-item active">Master Data</li>
+    <li class="breadcrumb-item active">Data Produk</li>
 </ol>
 <div class="card mb-4">
     <div class="card-body">
@@ -24,23 +22,21 @@ $data_produk = $model->dataProduk();
 </div>
 <div class="card mb-4">
     <div class="card-header">
-        <!-- <i class="fas fa-table me-1"></i>
-        DataTable Example -->
-        <!-- membuat tombol mengarahkan ke tambah -->
-        <a href="index.php?url=product_form" class="btn btn-primary btn-sm"> Tambah</a>
+        <!--<i class="fas fa-table me-1"></i>-->
+        <a href="index.php?url=product_form" class="btn btn-primary btn-sm">Tambah</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
             <thead>
                 <tr>
                     <th> No </th>
-                    <th> Kode_Produk </th>
-                    <th> Nama_produk </th>
-                    <th> Harga_beli </th>
-                    <th> Harga_produk </th>
-                    <th> Stok_Produk </th>
-                    <th> Min_stock </th>
-                    <th> Jenis_Produk </th>
+                    <th>Kode_Produk</th>
+                    <th>Nama_produk</th>
+                    <th>Harga_beli</th>
+                    <th>Harga_produk</th>
+                    <th>Stok_Produk</th>
+                    <th>Min_stock</th>
+                    <th>Jenis_Produk</th>
                     <th> Action </th>
                 </tr>
             </thead>
@@ -61,11 +57,7 @@ $data_produk = $model->dataProduk();
                 <?php
                 $no = 1;
                 foreach ($data_produk as $row) {
-
                     ?>
-
-
-
                     <tr>
                         <td>
                             <?= $no ?>
@@ -92,27 +84,21 @@ $data_produk = $model->dataProduk();
                             <?= $row['jenis_produk'] ?>
                         </td>
                         <td>
-                            <form action="product_controller.php" method="POST">
+                            <form action="product_controller.php" method="post">
                                 <a class="btn btn-info btn-sm"
                                     href="index.php?url=product_detail&id=<?= $row['id'] ?>">Detail</a>
                                 <a class="btn btn-warning btn-sm" href="">Ubah</a>
                                 <a class="btn btn-danger btn-sm" href="">Hapus</a>
+
                                 <input type="hidden" name="idx" value="<?= $row['id'] ?>">
                             </form>
                         </td>
-
                     </tr>
-                    <?php
-                    $no++;
-                }
-                ?>
-
+                    <?php $no++;
+                } ?>
             </tbody>
         </table>
     </div>
 </div>
 </div>
-<?php
-// include_once 'bottom.php';
-
-?>
+</div>

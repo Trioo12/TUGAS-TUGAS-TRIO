@@ -8,7 +8,7 @@ class Kartu
         $this->koneksi = $dbh;
     }
 
-    public function datakartu()
+    public function datakartuu()
     {
         $sql = "SELECT * FROM kartu";
         $ps = $this->koneksi->prepare($sql);
@@ -16,7 +16,7 @@ class Kartu
         $rs = $ps->fetchAll();
         return $rs;
     }
-    public function getPelanggan($id)
+    public function getKartu($id)
     {
         $sql = "SELECT * FROM kartu";
         $ps = $this->koneksi->prepare($sql);

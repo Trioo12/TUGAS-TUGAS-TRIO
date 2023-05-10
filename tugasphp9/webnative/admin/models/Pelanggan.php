@@ -33,6 +33,20 @@ class JenisPelanggan
         $ps->execute($data);
 
     }
+    public function ubah($data)
+    {
+        $sql = "INSERT INTO pelanggan(kode=?, nama_pelanggan=?, alamat=?, jk=?, tmp_lahir=?, tgl_lahir=?, email=?, kartu_id=?)
+        WHERE id=?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute($data);
+    }
+    public function hapus($id)
+    {
+        $sql = "DELETE FROM pelanggan WHERE id=?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute([$id]);
+
+    }
 }
 
 ?>
