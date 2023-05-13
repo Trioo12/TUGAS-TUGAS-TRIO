@@ -1,0 +1,54 @@
+<?php
+session_start();
+// include_once 'login.php';
+//memanggil dan memproses file bagian atas
+include_once 'koneksi.php';
+include_once 'models/Produk.php';
+include_once 'models/jenis_produk.php';
+include_once 'models/Pesanan.php';
+include_once 'models/Pelanggan.php';
+$sesi = $_SESSION['MEMBER'];
+if (isset($sesi)) {
+    include_once 'models/Kartu.php';
+
+    include_once 'top.php';
+    //memanggil dan memproses file bagian menu
+    include_once 'menu.php';
+    //include_once 'models/Member';
+
+
+    ?>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h1>Selamat Datang di Web Admin</h1>
+                <?php
+                //algoritma menangkap url agar masuk kedalam index
+                $url = $_GET['url'];
+                if ($url == 'dashboard') {
+                    include_once 'dashboard.php';
+                } else if (!empty($url)) {
+                    include_once '' . $url . '.php';
+
+                } else {
+                    'dashboard.php';
+
+                }
+
+
+                ?>
+            </div>
+        </main>
+    </div>
+    <?php
+
+    //memanggil file bagian bawah
+    include_once 'bottom.php';
+
+} else {
+    echo '<script>alert("Anda tidak dapat masuk9!");history.back();</script>';
+}
+
+
+
+?>
